@@ -8,18 +8,26 @@
             .test {
                 box-sizing: border-box;
                 background-color: chocolate;
-                width: 300px;
-                height: 300px;
+                width: 150px;
+                height: 150px;
                 padding: 10px;
                 border: 5px solid violet;
-                margin: 0 auto;
+                /* margin: 0 auto; */
                 text-align: center;
+            }
+            .test:nth-child(odd) {
+                background-color: rgb(151, 151, 207);
             }
         </style>
     </head>
 
     <body>
-        <div class="test">1</div>
+        <div class="wrapper">
+            <div class="test">1</div>
+            <div class="test">2</div>
+            <div class="test">3</div>
+        </div>
+
         <table>
             <caption>
                 Salaries
