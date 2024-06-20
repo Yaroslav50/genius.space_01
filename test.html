@@ -5,30 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Test html</title>
         <style>
-            .test {
+            * {
                 box-sizing: border-box;
-                background-color: chocolate;
-                width: 150px;
-                height: 150px;
-                padding: 10px;
-                border: 5px solid violet;
-                /* margin: 0 auto; */
-                text-align: center;
             }
-            .test:nth-child(odd) {
-                background-color: rgb(151, 151, 207);
+
+            .flex-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* MAIN AXIS, ГОЛОВНА ВІСЬ - ГОРИЗОНТ ЗА ЗАМОВЧУВАННЯМ*/
+                /* align-items: center;  CROSS AXIS, ПОПЕРЧЕЧНА ВІСЬ - ВЕРТИКАЛЬ ЗА ЗАМОВЧУВАННЯМ*/
+                /* flex-wrap: wrap;  РІДКО ЗАСТОСОВУЄТЬСЯ */
+                /* align-content: center;  РІДКО ЗАСТОСОВУЄТЬСЯ. МОЖЛИВО, ЯКЩО ВИСОТА КОНТЕЙНЕРА ВЕЛИКА */
             }
+            .item {
+                flex-basis: 250px; /* Задає ширину флекс-елемента у флекс-контейнері, краще за width */
+                /* width: 150px; */
+                height: 100px;
+                margin: 10px;
+                border: 5px solid rgb(0, 60, 255);
+            }
+            
         </style>
     </head>
 
     <body>
-        <div class="wrapper">
-            <div class="test">1</div>
-            <div class="test">2</div>
-            <div class="test">3</div>
+        <div class="flex-container">
+            <div class="item">1</div>
+            <div class="item">
+                2. flex-grow: 1; Регулює заповнення елементом вільного місця в
+                контейнері
+            </div>
+            <div class="item">3</div>
+            <div class="item">4</div>
         </div>
 
-        <table>
+        <table style="display: none">
+            <!-- !!!!!!!!! -->
             <caption>
                 Salaries
             </caption>
@@ -84,7 +96,7 @@
                 justify-content: space-between;
             "
         >
-            <iframe
+      <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.511824878378!2d30.53302594146628!3d50.45019307171038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce4d637de063%3A0x9b54fb10552f8727!2z0KHRgtCw0LTRltC-0L0gwqvQlNC40L3QsNC80L7CuyDRltC8LiDQktCw0LvQtdGA0ZbRjyDQm9C-0LHQsNC90L7QstGB0YzQutC-0LPQvg!5e0!3m2!1suk!2sua!4v1718179999661!5m2!1suk!2sua"
                 width="49%"
                 height="315px"
