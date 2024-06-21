@@ -327,6 +327,27 @@ header {
     /* color: var(--bakery-landing-1-background); */
 }
 
+/* Carousel section */
+
+.carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    fill: var(--bakery-landing-1-s1);
+    border: 1px solid var(--bakery-landing-1-s1);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background-color: var(--bakery-landing-1-s1);
+    fill: var(--bakery-landing-1-background);
+}
+
 /* Conrtacts section */
 
 .contacts-title {
@@ -350,6 +371,10 @@ header {
 
 .address-link:hover {
     color: var(--bakery-landing-1-c2);
+}
+
+.address-icon {
+    fill: var(--bakery-landing-1-background);
 }
 
 .address-copyright {
