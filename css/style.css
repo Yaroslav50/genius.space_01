@@ -276,6 +276,20 @@ header {
     content: "";
 }
 
+.chefs-list {
+    display: flex;
+    gap: 30px;
+}
+
+.chefs-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+.chefs-card {
+    display: flex;
+    gap: 30px;
+}
+
 .chef-title {
     margin-bottom: 16px;
     font-size: 40px;
@@ -289,6 +303,12 @@ header {
 }
 
 /* Formarts section */
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 .formats-list {
     display: flex;
     gap: 20px;
@@ -341,13 +361,16 @@ header {
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .carousel-button:hover {
     background-color: var(--bakery-landing-1-s1);
     fill: var(--bakery-landing-1-background);
 }
-
+.carousel-button.right {
+    transform: rotate(180deg);
+}
 /* Conrtacts section */
 
 .contacts-title {
