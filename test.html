@@ -1,157 +1,85 @@
 <!DOCTYPE html>
 <html lang="uk">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Test html</title>
-        <style>
-            * {
-                box-sizing: border-box;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test html</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        margin: 0 auto;
+        width: 80%;
+        border: 1px dotted black;
+        display: flex;
+        gap: 40px;
+      }
+      .parent div {
+        margin: 20px;
+        text-align: center;
+      }
+      .red {
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 0, 0, 0.6);
+        transform: translate(10px, 50px);
+      }
+      .green {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 128, 0, 1);
+        transform: rotate(90deg);
+      }
+      .blue {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(73, 73, 192);
+        transform: scale(1.5);
+        animation-name: colorChange;
+        animation-duration: 2s;
+        animation-iteration-count: 5;
+        animation-timing-function: linear;
+      }
+      
+      @keyframes colorChange {
+        0 {
+          background-color: blue;
+        }
+        50% {
+          background-color: brown;
+        }
+        100% {
+          background-color: red;
+        }
+      }
 
-            .flex-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center; /* MAIN AXIS, ГОЛОВНА ВІСЬ - ГОРИЗОНТ ЗА ЗАМОВЧУВАННЯМ*/
-                /* align-items: center;  CROSS AXIS, ПОПЕРЧЕЧНА ВІСЬ - ВЕРТИКАЛЬ ЗА ЗАМОВЧУВАННЯМ*/
-                /* flex-wrap: wrap;  РІДКО ЗАСТОСОВУЄТЬСЯ */
-                /* align-content: center;  РІДКО ЗАСТОСОВУЄТЬСЯ. МОЖЛИВО, ЯКЩО ВИСОТА КОНТЕЙНЕРА ВЕЛИКА */
-            }
-            .item {
-                flex-basis: 250px; /* Задає ширину флекс-елемента у флекс-контейнері, краще за width */
-                /* width: 150px; */
-                height: 100px;
-                margin: 10px;
-                border: 5px solid rgb(0, 60, 255);
-            }
-        </style>
-    </head>
+      .orange {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 136, 0);
+        transform: skew(20deg, 20deg);
+        animation-name: spin;
+        animation-duration: 2s;
+      }
 
-    <body>
-        <div class="svg-test">
-            <svg
-                aria-hidden="false"
-                style="
-                    position: absolute;
-                    width: 32;
-                    height: 32;
-                    overflow: hidden;
-                "
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-                <defs>
-                    <symbol id="icon-ArrowL-1" viewBox="0 0 36 32">
-                        <path
-                            d="M1.062 17.414c-0.781-0.781-0.781-2.047 0-2.828l12.728-12.728c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-11.314 11.314 11.314 11.314c0.781 0.781 0.781 2.047 0 2.828s-2.047 0.781-2.828 0l-12.728-12.728zM36 18h-33.524v-4h33.524v4z"
-                        ></path>
-                    </symbol>
-                    <symbol id="icon-facebook" viewBox="0 0 32 32">
-                        <path
-                            d="M0 16c0-8.837 7.163-16 16-16s16 7.163 16 16c0 8.837-7.163 16-16 16s-16-7.163-16-16zM17.668 25.408v-8.705h2.403l0.319-3h-2.721l0.004-1.501c0-0.782 0.074-1.202 1.198-1.202h1.502v-3h-2.403c-2.887 0-3.903 1.455-3.903 3.902v1.801h-1.799v3h1.799v8.705h3.602z"
-                        ></path>
-                    </symbol>
-                    <symbol id="icon-instagram" viewBox="0 0 32 32">
-                        <path
-                            d="M0 16c0-8.837 7.163-16 16-16s16 7.163 16 16c0 8.837-7.163 16-16 16s-16-7.163-16-16zM16.001 7.467c-2.317 0-2.608 0.010-3.519 0.052-0.909 0.042-1.528 0.185-2.071 0.396-0.561 0.218-1.037 0.51-1.512 0.984s-0.766 0.95-0.985 1.511c-0.212 0.543-0.356 1.163-0.396 2.071-0.041 0.91-0.051 1.201-0.051 3.519s0.010 2.607 0.052 3.518c0.042 0.909 0.186 1.529 0.396 2.071 0.218 0.561 0.51 1.037 0.984 1.512s0.95 0.767 1.511 0.985c0.543 0.211 1.163 0.355 2.072 0.396 0.91 0.041 1.201 0.052 3.518 0.052s2.608-0.010 3.518-0.052c0.908-0.042 1.529-0.185 2.072-0.396 0.561-0.218 1.036-0.51 1.511-0.985s0.766-0.95 0.985-1.512c0.21-0.543 0.354-1.163 0.396-2.071 0.041-0.91 0.052-1.2 0.052-3.518s-0.011-2.608-0.052-3.519c-0.043-0.909-0.187-1.529-0.396-2.071-0.219-0.561-0.51-1.037-0.985-1.512s-0.949-0.766-1.511-0.984c-0.544-0.211-1.164-0.355-2.073-0.396-0.91-0.041-1.2-0.052-3.518-0.052h0.003z"
-                        ></path>
-                        <path
-                            d="M15.235 9.005c0.227-0 0.481 0 0.766 0 2.278 0 2.548 0.008 3.448 0.049 0.832 0.038 1.284 0.177 1.584 0.294 0.398 0.155 0.682 0.34 0.981 0.638s0.484 0.583 0.639 0.981c0.117 0.3 0.256 0.752 0.294 1.584 0.041 0.899 0.050 1.17 0.050 3.447s-0.009 2.548-0.050 3.447c-0.038 0.832-0.177 1.284-0.294 1.584-0.155 0.398-0.34 0.682-0.639 0.98s-0.582 0.483-0.981 0.638c-0.3 0.117-0.752 0.256-1.584 0.294-0.9 0.041-1.17 0.050-3.448 0.050s-2.549-0.009-3.448-0.050c-0.832-0.038-1.284-0.177-1.585-0.294-0.398-0.155-0.683-0.34-0.981-0.638s-0.484-0.582-0.639-0.981c-0.117-0.3-0.256-0.752-0.294-1.584-0.041-0.9-0.049-1.17-0.049-3.449s0.008-2.548 0.049-3.447c0.038-0.832 0.177-1.284 0.294-1.584 0.155-0.398 0.34-0.683 0.639-0.981s0.583-0.484 0.981-0.639c0.301-0.117 0.753-0.256 1.585-0.294 0.787-0.036 1.092-0.046 2.683-0.048v0.002zM20.555 10.422c-0.565 0-1.024 0.458-1.024 1.024s0.459 1.024 1.024 1.024c0.565 0 1.024-0.459 1.024-1.024s-0.459-1.024-1.024-1.024zM16 11.618c-2.42 0-4.382 1.962-4.382 4.382s1.962 4.381 4.382 4.381c2.42 0 4.381-1.961 4.381-4.381s-1.961-4.382-4.381-4.382z"
-                        ></path>
-                        <path
-                            d="M16.001 13.155c1.571 0 2.845 1.273 2.845 2.844s-1.274 2.845-2.845 2.845c-1.571 0-2.845-1.274-2.845-2.845s1.273-2.844 2.845-2.844z"
-                        ></path>
-                    </symbol>
-                </defs>
-            </svg>
-        </div>
-        <div class="flex-container">
-            <div class="item">1</div>
-            <div class="item">
-                2. flex-grow: 1; Регулює заповнення елементом вільного місця в
-                контейнері
-            </div>
-            <div class="item">3</div>
-            <div class="item">4</div>
-        </div>
+      @keyframes spin {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
 
-        <table style="display: none">
-            <!-- !!!!!!!!! -->
-            <caption>
-                Salaries
-            </caption>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Full name</th>
-                    <th>Position</th>
-                    <th>Salary</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <!-- <td>1</td>
-                    <td>Bill Gates</td>
-                    <td>Founder Microsoft</td> -->
-                    <td colspan="4" style="text-align: center">1000$</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Bill Gates</td>
-                    <td>Founder Microsoft</td>
-                    <td>1000$</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <!-- <td>Bill Gates</td>
-                    <td>Founder Microsoft</td> -->
-                    <td colspan="3" style="text-align: center">1000$</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Bill Gates</td>
-                    <td>Founder Microsoft</td>
-                    <td>1000$</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>4000$</td>
-                </tr>
-            </tfoot>
-        </table>
-        <p>Заголовок на сторінці позначається тегом &lt;h1&gt;</p>
-        <div
-            style="
-                display: flex;
-                flex-direction: row;
-                border: 1px solid black;
-                justify-content: space-between;
-            "
-        >
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.511824878378!2d30.53302594146628!3d50.45019307171038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce4d637de063%3A0x9b54fb10552f8727!2z0KHRgtCw0LTRltC-0L0gwqvQlNC40L3QsNC80L7CuyDRltC8LiDQktCw0LvQtdGA0ZbRjyDQm9C-0LHQsNC90L7QstGB0YzQutC-0LPQvg!5e0!3m2!1suk!2sua!4v1718179999661!5m2!1suk!2sua"
-                width="49%"
-                height="315px"
-                style="border: 0; border-right: 1px solid black"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <iframe
-                width="49%"
-                height="315"
-                src="https://www.youtube.com/embed/hRlqLkcXbNc?si=jxoQYau4-Cnq55zB&amp;start=53"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-            ></iframe>
-        </div>
-    </body>
+  <body>
+    <div class="parent">
+      <div class="red">translate</div>
+      <div class="green">rotate</div>
+      <div class="blue">scale</div>
+      <div class="orange">skew</div>
+    </div>
+  </body>
 </html>
