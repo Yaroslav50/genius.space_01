@@ -534,16 +534,26 @@ header {
 
 .modal {
     position: relative;
-    border-radius: 32px;
     width: 100%;
     max-width: 880px;
     height: 100%;
     max-height: 880px;
+    padding: 128px;
     background: var(--bakery-landing-1-background);
+    border-radius: 32px;
 }
 
 .modal-btn-close {
     position: absolute;
     top: 40px;
     right: 40px;
+}
+
+/* FORM */
+.form-input {
+    padding: 16px 42px;
+}
+
+.form-label {
+    display: block;
 }
