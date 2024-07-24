@@ -550,56 +550,46 @@ header {
     right: 40px;
 }
 
+.modal-change-class-name-later {
+    margin-bottom: 72px;
+}
 /* FORM */
 
 .form-field {
     margin-bottom: 32px;
+    position: relative;
 }
 
 .form-label {
-    display: block;
+    /* display: block;  - не потрібно, бо position != static вже робить елемент блоковим*/
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    font-style: 16px;
+    line-height: 1.17;
+    transition: transform 0.3s;
 }
 
 .form-input {
     padding: 16px 42px;
-    font-size: 16px;
-    line-height: 1.17;
     width: 100%;
     border: 1px solid var(--bakery-landing-1-s4);
     border-radius: 8px;
     background-color: transparent;
 }
 
-.form-input::placeholder {
-    font-family: var(--second-family);
-    font-size: 16px;
-    line-height: 1.17;
-    color: var(--bakery-landing-1-s4);
-}
-
 .form-input:focus {
     border-color: var(--bakery-landing-1-c2);
 }
 
-.form-input:focus::placeholder {
-    color: var(--bakery-landing-1-s1);
-}
-
-.form-button {
-    display: block;
-    margin: 0 auto 24px;
-}
-
-.form-terms {
-    min-width: 220px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.5;
-    text-align: center;
-}
-
-.form-terms-link {
-    color: var(--bakery-landing-1-s1);
-    text-decoration: underline solid var(--bakery-landing-1-s1);
-    text-underline-offset: 2px;
+/* Перший спосіб анімації лейбла інпута */
+/* 1. LABEL в HTML має розташовуватись після свого INPUT, а не після*/
+/* 2. Використаємо селектор + */
+/* .form-input:focus + .form-label { transform: translate(-36px, -40px); }  */
+/* --------------------------------------------------------------------------------------- */
+/* Другий спосіб анімації лейбла інпута */
+/* LABEL в HTML має розташовуватись перед своїм INPUT, як і було одразу */
+/* Використаємо псевдоклас FOCUS-WITHIN для батьківського елемента */
+.form-field:focus-within .form-label {
+    transform: translate(-36px, -40px);
 }
