@@ -128,6 +128,12 @@ ul {
     color: var(--bakery-landing-1-s3);
 }
 
+/* .button:disabled {
+    color: gray;
+    background-color: lightgrey;
+    cursor: not-allowed;
+} */
+
 /* Link */
 
 .link {
