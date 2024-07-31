@@ -1,0 +1,25 @@
+.hero-section {
+    padding: 272px 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(
+            127deg,
+            rgba(18, 18, 17, 0.78) 0%,
+            rgba(18, 18, 17, 0.6) 63.89%,
+            rgba(18, 18, 17, 0) 100%
+        ),
+        url("../images/hero-section-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 128px;
+    text-align: center;
+    color: var(--bakery-landing-1-background);
+}
+
+.hero-title .accent {
+    color: var(--bakery-landing-1-c2);
+}
