@@ -1,0 +1,46 @@
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.formats-list {
+    display: flex;
+    gap: 20px;
+}
+
+.formats-item {
+    flex-basis: calc(100% / 3);
+}
+
+.format-card {
+    padding: 24px;
+    height: 444px;
+    background: linear-gradient(
+        180deg,
+        rgba(49, 38, 26, 0) 55.21%,
+        rgba(49, 38, 26, 0.71) 72.92%,
+        #31261a 100%
+    );
+    border-radius: 16px;
+    transition: transform 0.3s;
+}
+.format-card:hover {
+    transform: scale(1.05);
+}
+
+.format-title {
+    font-weight: 600;
+    font-size: 24px;
+    /* color: var(--bakery-landing-1-background); */
+}
+
+.formats-title {
+    margin-bottom: 80px;
+}
+
+.format-text {
+    font-weight: 300;
+    font-size: 14px;
+    /* color: var(--bakery-landing-1-background); */
+}

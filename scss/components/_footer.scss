@@ -1,0 +1,80 @@
+.footer {
+    position: relative;
+    background-image: url("../images/footer-blur.png");
+    background-color: var(--bakery-landing-1-s1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 32px 0;
+}
+.footer::before,
+.footer::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.footer::before {
+    background-image: url(../images/footer-bread-left.svg);
+    width: 180px;
+    height: 120px;
+}
+
+.footer::after {
+    background-image: url(../images/footer-bread-right.svg);
+    right: 0;
+    width: 380px;
+    height: 190px;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo {
+    flex-grow: 1;
+}
+
+.footer-menu {
+    flex-grow: 1;
+}
+
+.footer-address {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+.address-list {
+    flex-grow: 1;
+}
+
+.address-info {
+    flex-grow: 1;
+}
+
+.address-link {
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--bakery-landing-1-background);
+    text-decoration: none;
+}
+
+.address-link:hover {
+    color: var(--bakery-landing-1-c2);
+}
+
+.address-icon {
+    fill: var(--bakery-landing-1-background);
+}
+
+.address-copyright {
+    font-size: 14px;
+    color: var(--bakery-landing-1-s4);
+}

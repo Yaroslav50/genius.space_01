@@ -1,0 +1,58 @@
+.chefs-title {
+    position: relative;
+    margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+    position: absolute;
+    bottom: 24px;
+    /* display: block;  У випадку position: absolute елемент автоматично стає блоковим*/
+    border: 2px solid var(--bakery-landing-1-c5);
+    width: 352px;
+    height: 0px;
+    content: "";
+}
+
+.chefs-title::before {
+    left: 0;
+}
+
+.chefs-title::after {
+    right: 0;
+}
+
+.chefs-list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+
+.chefs-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+.chefs-card {
+    display: flex;
+    gap: 30px;
+}
+
+.chef-title {
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--bakery-landing-1-background),
+        -16px 16px 0 2px var(--bakery-landing-1-s4);
+}
+
+.chefs-text p {
+    margin-bottom: 24px;
+}
+
+.chefs-text p:last-child {
+    margin-bottom: 0;
+}
