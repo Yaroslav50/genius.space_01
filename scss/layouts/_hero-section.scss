@@ -11,15 +11,11 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-}
 
-.hero-title {
-    font-weight: 900;
-    font-size: 128px;
-    text-align: center;
-    color: var(--bakery-landing-1-background);
-}
-
-.hero-title .accent {
-    color: var(--bakery-landing-1-c2);
+    &__title {
+        font-weight: 900;
+        font-size: 128px;
+        text-align: center;
+        color: var(--bakery-landing-1-background);
+    }
 }

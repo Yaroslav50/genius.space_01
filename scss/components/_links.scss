@@ -5,11 +5,10 @@
     color: var(--bakery-landing-1-background);
     text-decoration: none;
     transition: color 0.3s;
-}
 
-.link:hover {
-    /* font-weight: 600; */
-    font-size: 18px;
-    text-align: center;
-    color: var(--bakery-landing-1-c2);
+    &:hover {
+        font-size: 18px;
+        text-align: center;
+        color: var(--bakery-landing-1-c2);
+    }
 }
