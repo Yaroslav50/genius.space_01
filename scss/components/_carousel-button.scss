@@ -12,12 +12,14 @@
     cursor: pointer;
     flex-shrink: 0;
     transition: background-color 0.3s, fill 0.3s;
+    &:hover {
+        background-color: var(--bakery-landing-1-s1);
+        fill: var(--bakery-landing-1-background);
+    }
+    &--next {
+        transform: rotate(180deg);
+    }
+    
 }
 
-.carousel-button:hover {
-    background-color: var(--bakery-landing-1-s1);
-    fill: var(--bakery-landing-1-background);
-}
-.carousel-button.next {
-    transform: rotate(180deg);
-}
+

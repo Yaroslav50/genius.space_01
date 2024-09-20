@@ -1,0 +1,13 @@
+.form-terms {
+    min-width: 220px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+
+    &__link {
+        color: var(--bakery-landing-1-s1);
+        text-decoration: underline solid var(--bakery-landing-1-s1);
+        text-underline-offset: 2px;
+    }
+}

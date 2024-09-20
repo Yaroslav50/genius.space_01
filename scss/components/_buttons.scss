@@ -6,9 +6,11 @@
     background: var(--bakery-landing-1-c2);
     border: 2px solid var(--bakery-landing-1-c2);
     border-radius: 8px;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--bakery-landing-1-s3);
+    }
 }
 
-.button:hover {
-    background-color: transparent;
-    color: var(--bakery-landing-1-s3);
-}
+

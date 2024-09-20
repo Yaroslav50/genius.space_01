@@ -2,9 +2,8 @@
     &__title {
     position: relative;
     margin: 0 auto 80px;
-    }
-    &__title::before,
-    &__title::after {
+    &::before,
+    &::after {
         position: absolute;
         bottom: 24px;
         /* display: block;  У випадку position: absolute елемент автоматично стає блоковим*/
@@ -13,12 +12,14 @@
         height: 0px;
         content: "";
     }
-    &__title::before {
+    &::before {
         left: 0;
     }
-    &__title::after {
+    &::after {
         right: 0;
     }
+    }
+   
     &__list {
         display: flex;
         gap: 40px 30px;
