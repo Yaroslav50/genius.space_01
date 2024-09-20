@@ -1,37 +1,33 @@
 .tradition-section {
     padding-top: 96px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__content {
+        max-width: 710px;
+    }
+
+    &__title {
+        margin-bottom: 42px;
+    }
+
+    &__text {
+        margin-bottom: 42px;
+
+        &--limited {
+        max-width: 336px;
+        margin-bottom: 52px;
+    }
+    }
 }
 
-.traditions-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
 
-.traditions-content {
-    max-width: 710px;
-}
 
-.tradition-title {
-    margin-bottom: 42px;
-}
 
-.tradition-text {
-    font-family: var(--font-family);
-    font-weight: 400;
-    color: var(--bakery-landing-1-s1);
-}
 
-.tradition-text.limited {
-    max-width: 336px;
-}
 
-.tradition-text .brand {
-    font-weight: 600;
-    font-size: 18px;
-    color: var(--bakery-landing-1-c2);
-}
 
-.tradition-text .uppercase {
-    text-transform: uppercase;
-}

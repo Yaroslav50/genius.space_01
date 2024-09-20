@@ -23,5 +23,10 @@
         gap: 64px;
         flex-grow: 1;
         justify-content: center;
+
+        @media screen and (max-width: 1200px) {
+            display: none;
+            
+        }
     }
 }
