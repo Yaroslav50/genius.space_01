@@ -6,75 +6,81 @@
     background-size: cover;
     background-position: center;
     padding: 32px 0;
+
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+    &__nav {
+        flex-basis: 50%;
+        display: flex;
+        gap: 20px;
+    }
+    
+    &__logo {
+        flex-grow: 1;
+    }
+    &__link{
+        margin-bottom: 16px;
+    }
+    &__menu {
+        flex-grow: 1;
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        bottom: 0;
+        background-repeat: no-repeat;
+        content: "";
+    }
+
+    &::before {
+        background-image: url(../images/footer-bread-left.svg);
+        width: 180px;
+        height: 120px;
+    }
+
+    &::after {
+        background-image: url(../images/footer-bread-right.svg);
+        right: 0;
+        width: 380px;
+        height: 190px;
+    }
+    &__address {
+        flex-basis: 50%;
+        display: flex;
+        gap: 20px;
+    }
 }
-.footer::before,
-.footer::after {
-    position: absolute;
-    bottom: 0;
-    background-repeat: no-repeat;
-    content: "";
+.address{
+    &__list {
+        flex-grow: 1;
+    }
+        &__info {
+        flex-grow: 1;
+    }
+        &__link {
+        font-weight: 300;
+        font-size: 16px;
+        color: var(--bakery-landing-1-background);
+        text-decoration: none;
+        margin-bottom: 16px;
+
+        &:hover {
+        color: var(--bakery-landing-1-c2);
+        }
+    }
+        &__icon {
+        fill: var(--bakery-landing-1-background);
+    }
+        &__copyright {
+        font-size: 14px;
+        color: var(--bakery-landing-1-s4);
+    }
 }
 
-.footer::before {
-    background-image: url(../images/footer-bread-left.svg);
-    width: 180px;
-    height: 120px;
-}
-
-.footer::after {
-    background-image: url(../images/footer-bread-right.svg);
-    right: 0;
-    width: 380px;
-    height: 190px;
-}
-
-.footer-container {
+.social-media-icons{
     display: flex;
-    gap: 20px;
-}
-.footer-nav {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
-
-.footer-logo {
-    flex-grow: 1;
-}
-
-.footer-menu {
-    flex-grow: 1;
-}
-
-.footer-address {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
-.address-list {
-    flex-grow: 1;
-}
-
-.address-info {
-    flex-grow: 1;
-}
-
-.address-link {
-    font-weight: 300;
-    font-size: 16px;
-    color: var(--bakery-landing-1-background);
-    text-decoration: none;
-}
-
-.address-link:hover {
-    color: var(--bakery-landing-1-c2);
-}
-
-.address-icon {
-    fill: var(--bakery-landing-1-background);
-}
-
-.address-copyright {
-    font-size: 14px;
-    color: var(--bakery-landing-1-s4);
+    flex-direction: row;
+    gap: 22px;
 }
