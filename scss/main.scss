@@ -1,3 +1,4 @@
+@import "./utils/variables";
 @import "./layouts/advantages-section";
 @import "./base";
 @import "./components/buttons";
@@ -16,9 +17,10 @@
 @import "./components/input";
 @import "./components/links";
 @import "./utils/mixins";
+@import "./layouts/mobile-menu";
 @import "./layouts/modal";
 @import "./layouts/section";
 @import "./utils/texts";
 @import "./layouts/tradition-section";
 @import "./utils/utils";
-@import "./utils/variables";
+

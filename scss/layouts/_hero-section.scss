@@ -14,8 +14,15 @@
 
     &__title {
         font-weight: 900;
-        font-size: 128px;
+        font-size: 67px;
+        line-height: 1;
         text-align: center;
         color: var(--bakery-landing-1-background);
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 128px;
+            line-height: 1.5;
+
+        }
     }
 }
