@@ -32,12 +32,12 @@
         }
 
         &--limited {
-        max-width: 336px;
-        margin-bottom: 0px;
+            margin-bottom: 0px;
 
-        @media screen and (min-width: $bp-tablet) {
-            margin-bottom: 52px;
-        }
+            @media screen and (min-width: $bp-tablet) {
+                max-width: 336px;
+                margin-bottom: 52px;
+            }   
         }
     }
 
