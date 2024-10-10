@@ -1,27 +1,33 @@
 .input {
-    &__label {
-        display: block;
-    }
-    &__control {
-        padding: 16px 42px;
-        font-size: 16px;
-        line-height: 1.17;
-        width: 100%;
-        border: 1px solid var(--bakery-landing-1-s4);
-        border-radius: 8px;
-        background-color: transparent;
+  &__label {
+    display: block;
+  }
+  &__control {
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.17;
+    width: 100%;
+    border: 1px solid var(--bakery-landing-1-s4);
+    border-radius: 8px;
+    background-color: transparent;
 
-        &::placeholder {
-            font-family: var(--second-family);
-            font-size: 16px;
-            line-height: 1.17;
-            color: var(--bakery-landing-1-s4);
-        }
-        &:focus {
-            border-color: var(--bakery-landing-1-c2);
-        }       
-        &:focus::placeholder {
-            color: var(--bakery-landing-1-s1);
-        }
+    @media screen and (min-width: $bp-tablet) {
+      font-weight: 400;
+      padding: 16px 42px;
     }
+
+    &::placeholder {
+      font-family: var(--second-family);
+      font-size: 16px;
+      line-height: 1.17;
+      color: var(--bakery-landing-1-s4);
+    }
+    &:focus {
+      border-color: var(--bakery-landing-1-c2);
+    }
+    &:focus::placeholder {
+      color: var(--bakery-landing-1-s1);
+    }
+  }
 }
