@@ -1,25 +1,23 @@
 .carousel-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    fill: var(--bakery-landing-1-s1);
-    border: 1px solid var(--bakery-landing-1-s1);
-    border-radius: 50%;
-    background-color: transparent;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background-color 0.3s, fill 0.3s;
-    &:hover {
-        background-color: var(--bakery-landing-1-s1);
-        fill: var(--bakery-landing-1-background);
-    }
-    &--next {
-        transform: rotate(180deg);
-    }
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  fill: var(--bakery-landing-1-s1);
+  border: 1px solid var(--bakery-landing-1-s1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.3s, fill 0.3s;
+
+  &:hover {
+    background-color: var(--bakery-landing-1-s1);
+    fill: var(--bakery-landing-1-background);
+  }
+  &.next {
+    transform: rotate(180deg);
+  }
 }
-
-
