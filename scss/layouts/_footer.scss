@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: center;
   padding: 32px 0;
+  overflow: hidden;
 
   &__container {
     display: flex;
@@ -77,7 +78,7 @@
     background-image: url(../images/footer-bread-right.svg);
     right: -140px;
     bottom: -48px;
-    width: 380px;
+    width: 392px;
     height: 190px;
     transform: scale(0.5);
 
