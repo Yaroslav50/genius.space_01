@@ -1,20 +1,21 @@
-.mobile-menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--bakery-landing-1-background);
-    transform: translateX(100%);
-    transition: transform 0.3s;
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bakery-landing-1-background);
+  transform: translateX(100%);
+  transition: transform 0.3s;
 
-    &.is-open{
-        transform: translateX(0);
-    }
+  &.is-open {
+    transform: translateX(0);
+    z-index: 1;
+  }
 
-    &__btn-close {
-        position: absolute;
-        top: 16px;
-        right: 24px;
-    }
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
 }
